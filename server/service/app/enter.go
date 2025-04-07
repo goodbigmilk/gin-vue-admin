@@ -1,3 +1,6 @@
 package app
 
-type ServiceGroup struct{ UserService }
+type ServiceGroup struct {
+	UserService
+	SupplierService
+}
