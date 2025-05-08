@@ -7,7 +7,7 @@ import (
 
 func bizModel() error {
 	db := global.GVA_DB
-	err := db.AutoMigrate(app.User{}, app.Supplier{})
+	err := db.AutoMigrate(app.User{}, app.Supplier{}, app.Warehouse{}, app.Product{}, app.Category{}, app.Purchases{})
 	if err != nil {
 		return err
 	}

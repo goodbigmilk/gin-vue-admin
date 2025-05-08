@@ -15,7 +15,11 @@ func initBizRouter(routers ...*gin.RouterGroup) {
 	holder(publicGroup, privateGroup)
 	{
 		appRouter := router.RouterGroupApp.App
-		appRouter.InitUserRouter(privateGroup, publicGroup) // 占位方法，保证文件可以正确加载，避免go空变量检测报错，请勿删除。
+		appRouter.InitUserRouter(privateGroup, publicGroup)
 		appRouter.InitSupplierRouter(privateGroup, publicGroup)
+		appRouter.InitWarehouseRouter(privateGroup, publicGroup)
+		appRouter.InitProductRouter(privateGroup, publicGroup)
+		appRouter.InitCategoryRouter(privateGroup, publicGroup) // 占位方法，保证文件可以正确加载，避免go空变量检测报错，请勿删除。
+		appRouter.InitPurchasesRouter(privateGroup, publicGroup)
 	}
 }
